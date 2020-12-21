@@ -1,7 +1,7 @@
 # API-GraphQL-em-Node.js-e-TypeScript-com-TypeGraphQL
 
 
-<p align="center">Este codigo representa a minha solução </p>
+<p align="center">Este codigo representa o workshop sobre GraphQL durante o Do While da Rocketseat </p>
 
 <p align="center">
  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
