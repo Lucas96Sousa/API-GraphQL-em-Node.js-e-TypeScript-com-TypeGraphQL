@@ -6,7 +6,7 @@ import { buildSchema } from 'type-graphql'
 import {ApolloServer} from 'apollo-server'
 import CategoryResolver from './graphql/category/CategoryResolver'
 
-dotenv.config()
+dotenv.config({path: '../.env'})
 
 
 async function bootstrap () {
@@ -16,8 +16,8 @@ const schema = await buildSchema({
 
 const server = new ApolloServer({schema})
 
-server.listen(5000, () => {
-  console.log(`Running on port: 5000`)
+server.listen(process.env.PORT, () => {
+  console.log(`Running http://localhost:${process.env.PORT}`)
 })
 }
 
