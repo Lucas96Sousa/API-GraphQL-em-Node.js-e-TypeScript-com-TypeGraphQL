@@ -23,4 +23,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## Para o uso do projeto
 
 Importar o git clone, em seguida executar o yarn ou npm install.
-Após isso executar: yarn dev ou npm run dev
+Após isso executar: yarn dev ou npm run dev e acessar o https://localhost:5000
