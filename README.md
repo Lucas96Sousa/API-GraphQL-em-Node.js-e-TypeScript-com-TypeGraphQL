@@ -15,8 +15,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/)
 - [Typescript](https://https://www.typescriptlang.org/)
--[GraphQL](https://graphql.org/)
--[TypeGraphQL](https://typegraphql.com/)
+- [GraphQL](https://graphql.org/)
+- [TypeGraphQL](https://typegraphql.com/)
 
 ## :computer: Instalação, execução e desenvolvimento
 
