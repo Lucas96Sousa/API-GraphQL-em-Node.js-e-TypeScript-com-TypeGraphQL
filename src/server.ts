@@ -7,19 +7,20 @@ import { buildSchema } from 'type-graphql'
 
 import {ApolloServer} from 'apollo-server'
 import CategoryResolver from './graphql/category/CategoryResolver'
+import VideoResolver from './graphql/Video/VideoResolver'
 
 
 
 
 async function bootstrap () {
 const schema = await buildSchema({
-  resolvers: [CategoryResolver]
+  resolvers: [CategoryResolver, VideoResolver]
 })
 
 const server = new ApolloServer({schema})
 
-server.listen(process.env.PORT, () => {
-  console.log(`Running http://localhost:${5000}`)
+server.listen(4100, () => {
+  console.log(`Running http://localhost:4100`)
 })
 }
 

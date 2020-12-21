@@ -1,15 +1,40 @@
-import {Query, Resolver} from 'type-graphql'
-import Category from './Category';
+import { Arg, Field, InputType, Mutation, Query, Resolver } from "type-graphql";
+import Category from "./Category";
+import CategorySchema from "../../model/CategorySchema";
 
-import CategorySchema from '../../model/CategorySchema'
+@InputType()
+class CategoryInput {
+  @Field()
+  description: string;
+  @Field()
+  name: string;
+}
 
-@Resolver(Category) // Define o que a Classe irá utilizar. 
-export default class CategoryResolver {
+@InputType()
+class CategoryUpdate{
+  @Field()
+  _id: string;
+  @Field()
+  name?: string;
+  @Field()
+  description?: string;
+}
 
-  @Query( () => [Category]) // Determina o que será buscado, no caso um array de Category
+@Resolver(Category)
+class CategoryResolver {
+  @Query(() => [Category])
   async categories() {
-    const categories = await CategorySchema.find()
-    return categories
+    const categories = await CategorySchema.find();
+    return categories;
   }
 
+  @Mutation(() => Category)
+  async createCategory(@Arg("categoryInput") categoryInput: CategoryInput) {
+    const category = await CategorySchema.create<CategoryInput>(categoryInput);
+    return category;
+  }
+
+ 
 }
+
+export default CategoryResolver
