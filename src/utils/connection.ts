@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 try {
   mongoose.set('useFindAndModify', false);
-  mongoose.connect('', {
+  mongoose.connect('DB_CONNECT', {
 
     useNewUrlParser:true,
     useUnifiedTopology: true,
