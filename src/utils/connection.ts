@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 try {
   mongoose.set('useFindAndModify', false);
-  mongoose.connect('mongodb+srv://lor:25252624@api.wypiw.mongodb.net/Graph?retryWrites=true&w=majority', {
+  mongoose.connect('', {
 
     useNewUrlParser:true,
     useUnifiedTopology: true,
